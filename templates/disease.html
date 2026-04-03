@@ -1,0 +1,44 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detected Disease</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/disease.css') }}">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo" class="logo-img">
+            <span class="logo-title">MediBot - Medicine Recommender</span>
+        </div>
+        <div class="nav-links">
+            <a href="{{ url_for('logout') }}">Home</a>
+            <a href="{{ url_for('home') }}">Symptoms</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </div>
+    
+    <div class="disease-container">
+        <h1>Detected Disease: {{ prediction_result }}</h1>
+
+    
+        <div class="action-buttons">
+            
+            <a href="{{ url_for('medication', disease=prediction_result) }}"> <button>Medication</button> </a>
+            
+            <a href="{{ url_for('workout', disease=prediction_result) }}"><button>Workout</button>
+            <a href="{{ url_for('dietchart', disease=prediction_result) }}"><button>Diet Chart</button></a>           
+              <button onclick="window.location.href='/';">Check Again</button>
+        </div>
+    </div>
+       <div class="bottom-image">
+        <img src="{{ url_for('static', filename='images/diseaseimage2.jpg') }}" alt="Bottom Image">
+      </div>
+   
+</body>
+</html>

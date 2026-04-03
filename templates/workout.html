@@ -1,0 +1,59 @@
+workout.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/workout.css') }}">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo" class="logo-img">
+            <span class="logo-title">MediBot - Medicine Recommender</span>
+        </div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}">Symptoms</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </div>
+
+    <div class="disease-container">
+        <h1>Recommended Workouts</h1>
+        <div class="workout-table-wrapper">
+            <table class="workout-table">
+                <thead>
+                    <tr>
+                        <th>Workout</th>
+                        <th>Body Part</th>
+                        <th>Equipment</th>
+                        <th>Level</th>
+                        <th>Instructions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for workout in workouts %}
+                    <tr>
+                        <td>{{ workout['Workout'] }}</td>
+                        <td>{{ workout['Body Part'] }}</td>
+                        <td>{{ workout['Equipment'] }}</td>
+                        <td>{{ workout['Level'] }}</td>
+                        <td>{{ workout['Instructions'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <a href="{{ url_for('predict') }}" class="go-back-btn">Go Back</a>
+    </div>
+    <div class="bottom-image">
+        <img src="{{ url_for('static', filename='images/diseaseimage2.jpg') }}" alt="Bottom Image">
+    </div>
+</body>
+</html>

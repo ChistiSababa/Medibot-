@@ -1,0 +1,52 @@
+
+
+</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Symptoms</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/symptoms.css') }}">
+  
+</head>
+<body>
+    
+    <div class="top-bar">
+        <div class="logo">
+            <img src="../static/images/logo.jpg" alt="Logo" class="logo-img">
+            <span class="logo-title">MediBot - Medicine Recommender</span>
+        </div>
+        <div class="nav-links">
+            <a href="{{ url_for('logout') }}">Home</a>
+            <a href="{{ url_for('home') }}">Symptoms</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+
+        </div>
+    </div>
+   
+
+   
+    <div class="form-container">
+        <h2>Track Symptoms</h2>
+        <!-- Add this help box -->
+    <div class="symptom-help">
+        <p><strong>Use underscores instead of spaces (e.g. "joint_pain")</strong></p>
+    </div>
+           <form action="/predict" method="POST">
+            <input type="text" name="symptom1">
+            <input type="text" name="symptom2">
+            <input type="text" name="symptom3">
+            <input type="text" name="symptom4">
+            <input type="text" name="symptom5">
+            <button type="submit">Detect Disease</button>
+       </form>
+
+        <!-- Go Back Button -->
+       <button onclick="window.location.href='../php/index.php'" class="go-back-btn">Go Back</button>
+      
+       
+    </div>
+
+</body>
+</html>

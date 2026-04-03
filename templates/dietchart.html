@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Chart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dietchart.css') }}">
+
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo" class="logo-img">
+            <span class="logo-title">MediBot - Medicine Recommender</span>
+        </div>
+        <div class="nav-links">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('home') }}">Symptoms</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </div>
+
+    <div class="diet-chart-container">
+        <h1>Diet Chart for <span>{{ disease }}</span></h1>
+        <ul class="diet-chart-list">
+            {% for item in diet_chart %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+
+        
+    </div>
+    <div style="text-align: center;">
+        <a href="{{ url_for('home') }}" class="go-back-btn">Go Back</a>
+    </div>
+
+</body>
+</html>

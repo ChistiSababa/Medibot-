@@ -1,0 +1,22 @@
+.workout-table-wrapper {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.workout-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+.workout-table th,
+.workout-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+.workout-table th {
+    background-color: #444;
+    color: #fff;
+}

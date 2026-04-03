@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top,#f0d2ef, #dfe4f8, #b3ace8, #dfe4f8,#bbb0e9);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.top-bar {
+background: linear-gradient(to right, #20126d, #a772c6);
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px 20px;
+width: 100%;
+box-sizing: border-box;
+margin: 0;
+
+}
+
+
+.logo {
+display: flex;
+align-items: center; /* Vertically centers logo and title */
+}
+
+.logo-img {
+width: 60px; /* Adjust logo size */
+height: auto;
+}
+
+.logo-title {
+color: white;
+font-size: 22px;
+margin-left: 10px; /* Adds space between logo and title */
+font-weight: bold;
+font-family: 'Georgia', serif;
+background-color: linear-gradient(to right, #1b0d6bf4, #a772c6);
+padding: 5px 10px;
+border-radius: 5px; /* Rounded corners */
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
+box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Box shadow */
+}
+
+
+.nav-links a {
+color: white;
+text-decoration: none;
+margin-left: 20px;
+font-size: 18px;
+border-radius: 5px; /* Rounded corners */
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
+box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Box shadow */
+} 
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Diet Chart Section */
+.diet-chart-container {
+    text-align: center;
+    background: linear-gradient(to bottom,rgba(207, 228, 247, 0.9),rgb(249, 230, 243));
+
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 1000px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.diet-chart-container h1 {
+    font-size: 35px;
+    color: #333;
+}
+
+.diet-chart-container span {
+    color: #6a5acd;
+    font-weight: bold;
+}
+
+.intro-text {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.diet-chart-list {
+    text-align: left;
+    padding: 0;
+    list-style-type: none;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.diet-chart-list li {
+    background: #f8f8ff;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.diet-section {
+    text-align: left;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f8f8ff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+}
+
+.diet-section h2 {
+    color: #6a5acd;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.action-buttons button {
+    background: #6a5acd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.action-buttons button:hover {
+    background: #00bfff;
+    transform: scale(1.05);
+}
+.go-back-btn:hover {
+    background-color: #7044b1; 
+}
